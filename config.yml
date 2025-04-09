@@ -1,0 +1,39 @@
+version: "3"
+containers:
+- name: shell
+  image: gcr.io/instruqt/cloud-client
+  shell: /bin/bash
+  ports:
+  - 80
+  memory: 2048
+  resources:
+    memory: 2048
+virtualbrowsers:
+- name: aws
+  url: https://signin.aws.amazon.com/console
+- name: azure
+  url: https://azure.microsoft.com/en-us/get-started/azure-portal
+- name: infoblox
+  url: https://portal.infoblox.com/
+- name: gcp
+  url: https://console.cloud.google.com
+- name: lab
+  url: https://igor-prosimo.s3.eu-west-1.amazonaws.com/Infoblox+PoC+-+Diagram+(2)+(1).png
+- name: aws-discovery
+  url: https://github.com/iracic82/AWS_Discovery
+gcp_projects:
+- name: infoblox-demo
+  services:
+  - compute.googleapis.com
+  - cloudresourcemanager.googleapis.com
+  - iam.googleapis.com
+  - serviceusage.googleapis.com
+  roles: []
+aws_accounts:
+- name: infoblox-demo
+  managed_policies:
+  - arn:aws:iam::aws:policy/AdministratorAccess
+azure_subscriptions:
+- name: infoblox-tenant
+  roles:
+  - Owner
