@@ -79,7 +79,7 @@ azure_subscriptions:
   roles:
   - Owner
 secrets:
-- name: Infoblox_Token
+- name: DEMO_HOSTED_ZONE_ID
 - name: DEMO_AWS_ACCESS_KEY_ID
 - name: DEMO_AWS_SECRET_ACCESS_KEY
-- name: DEMO_HOSTED_ZONE_ID
+- name: Infoblox_Token
