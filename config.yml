@@ -18,9 +18,11 @@ virtualbrowsers:
 - name: gcp
   url: https://console.cloud.google.com
 - name: lab
-  url: https://igor-prosimo.s3.eu-west-1.amazonaws.com/Infoblox+PoC+-+Diagram+(2)+(1).png
+  url: https://infoblox-igor.s3.eu-west-1.amazonaws.com/Secure+AI+Lab+diagram.jpeg
 - name: aws-discovery
   url: https://github.com/iracic82/AWS_Discovery
+- name: flask-ui
+  url: http://${_SANDBOX_ID}-websrv1infoblox.iracictechguru.com:5050
 gcp_projects:
 - name: infoblox-demo
   services:
@@ -28,12 +30,56 @@ gcp_projects:
   - cloudresourcemanager.googleapis.com
   - iam.googleapis.com
   - serviceusage.googleapis.com
-  roles: []
 aws_accounts:
 - name: infoblox-demo
+  services:
+  - ec2
+  - s3
+  - apigateway
+  - amplifyuibuilder
+  - cloudformation
+  - autoscaling
+  - cloudfront
+  - dynamodb
+  - iam
+  - lambda
+  - rds
+  - ssm
+  - route53
+  - route53resolver
+  - sns
+  - ebs
+  - drs
+  - cloudwatch
+  - events
+  - firehose
+  - internetmonitor
+  - logs
+  - networkmonitor
+  - oam
+  - sqs
+  - sts
+  regions:
+  - eu-west-2
+  - eu-central-1
+  - eu-central-2
+  - eu-north-1
+  - eu-south-1
+  - eu-south-2
+  - eu-west-1
+  - eu-west-3
+  - us-east-1
+  - us-east-2
+  - us-west-1
+  - us-west-2
   managed_policies:
   - arn:aws:iam::aws:policy/AdministratorAccess
 azure_subscriptions:
 - name: infoblox-tenant
   roles:
   - Owner
+secrets:
+- name: Infoblox_Token
+- name: DEMO_AWS_ACCESS_KEY_ID
+- name: DEMO_AWS_SECRET_ACCESS_KEY
+- name: DEMO_HOSTED_ZONE_ID

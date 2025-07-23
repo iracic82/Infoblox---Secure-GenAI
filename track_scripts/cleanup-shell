@@ -1,6 +1,7 @@
 #!/bin/bash
 set -euxo pipefail
-cd /root/infoblox-lab/Infoblox-PoC/scripts
+cd /root/infoblox-lab/secure-ai-infoblox/scripts
+
 
 
 
@@ -17,5 +18,8 @@ cd /root/infoblox-lab/Infoblox-PoC/scripts
 
 python3 delete_sandbox.py
 sleep 10
+python3 clean_dns_web.py
+sleep 10
 python3 delete_user.py
 sleep 10
+

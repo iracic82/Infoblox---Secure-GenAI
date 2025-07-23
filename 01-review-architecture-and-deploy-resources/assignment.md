@@ -4,6 +4,9 @@ id: qr6e9vyzs1r3
 type: challenge
 title: Review Architecture and Deploy Resources
 teaser: Review Architecture and Deploy Resources
+notes:
+- type: video
+  url: https://cdn.instruqt.com/assets/instruqt/2024-036%20Instruqt%20101_Version%203.0.mp4
 tabs:
 - id: x9axw3nirskv
   title: Shell
@@ -18,10 +21,6 @@ tabs:
   title: AWS Console
   type: browser
   hostname: aws
-- id: dwjipnhevogq
-  title: Azure Console
-  type: browser
-  hostname: azure
 - id: 27cy05p2n8oa
   title: Infoblox Portal
   type: browser
@@ -36,21 +35,66 @@ lab_config:
   default_layout_sidebar_size: 0
 enhanced_loading: null
 ---
-In this lab, you will get hands-on with Infoblox Universal DNS Management, a single solution for
-visibility and control of DNS tools used across on-premises, hybrid, and multi-cloud networks. You will
-begin with a tour of the centralized visibility and management for DNS, exploring the efficiency of the
-consolidated Infoblox Portal. Then, you’ll manage DNS records in Azure DNS and AWS Route 53, using
-the same Universal DDI interface and workflow to make updates across clouds.
+# Overview
+
+The integration of Generative AI into healthcare workflows is rapidly accelerating. Doctors, clinicians, and researchers are using AI to:
+ - Summarize clinical notes
+ - Draft care plans
+ - Analyze symptoms or diagnostics
+
+However, this also introduces new risk vectors — including uncontrolled DNS traffic, third-party API usage, and exposure to unvetted data sources.
+
+# Use Case Story: Dr. Claire
+
+Meet Dr. Claire, a busy pediatrician. She uses an internal web-based assistant to:
+ - Ask medical questions like “What are common asthma triggers in children?”
+ - Upload notes for summarization
+ - Pull references from drug or symptom databases
+
+Behind the scenes, this app uses AWS Bedrock with Claude to generate intelligent responses.
+
+But there’s a hidden challenge:
+ - What happens when the app tries to resolve domains like `ai-medicine-data.info`?
+ - Or connects to third-party APIs over DNS?
+ - Or leaks sensitive lookup patterns?
+
+This is where Infoblox DNS Security plays a critical role.
+
+# DNS Security for GenAI
+
+Even in secure cloud environments, AI apps and LLMs introduce DNS-layer activity:
+ - Flask-based apps resolve endpoints like `bedrock-runtime.amazonaws.com`
+ - LLM responses often include external medical URLs
+ - Optional third-party lookups may target unapproved or risky domains
+
+Infoblox Threat Defense provides:
+ - Allow-lists and domain policy control
+ - Detection of suspicious DNS behavior (e.g., entropy, volume, or tunneling)
+ - Real-time enforcement (RPZ, TIDE-based blocking)
+
+
+# Business Value
+
+Without DNS-layer enforcement, GenAI apps are opaque and vulnerable.
+ With Infoblox:
+ - Security teams gain real-time visibility and control
+ - AI access is restricted to approved sources
+ - Threats like DNS tunneling, data leaks, or typosquatting are neutralized
+ - AI adoption becomes safe and compliant in regulated sectors like healthcare
+
 
 
 > [!IMPORTANT]
-> **NOTE:** This environment is *real*! AWS and Azure Cloud Accounts have been created for each student. No bitcoin mining, please! :)
+> **NOTE:** This environment is *real*! AWS Cloud Accounts have been created for each student. No bitcoin mining, please! :)
 
 In this section we will:
 1) Review the cloud architecture
 2) Login to your cloud account console's
 3) Deploy resources onto your cloud regions
 4) Create your Infoblox Portal user
+
+
+
 
 ---
 
@@ -66,12 +110,31 @@ Navigate to the *Lab Diagram* tab above and review the diagram. This is what we'
 
 ## 2) Login to your cloud account consoles
 ===
-Using the credentials below, login to the AWS and Azure Web Consoles in their respective tabs above:
+
+🔐 Access Instructions
+
+Using the credentials below, log in to the AWS  Web Consoles.
 
 ---
 # AWS Credentials ☁️
 
-Select "IAM Account" and enter the **AWS ID**:
+🔐 Logging In to the AWS Console.
+
+👉 First, open the “AWS Console” tab on the left-hand side of your Instruqt lab environment. This will launch the AWS login page in a new browser panel.
+
+![Screenshot 2025-07-12 at 11.23.29.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/86d80bec0e3af0161dbb62f6e26e2626/assets/Screenshot%202025-07-12%20at%2011.23.29.png)
+
+Then follow these steps:
+1.	Select “IAM Account”.
+On the login screen, choose IAM Account (not root).
+
+![Screenshot 2025-07-12 at 11.23.29.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/86d80bec0e3af0161dbb62f6e26e2626/assets/Screenshot%202025-07-12%20at%2011.23.29.png)
+
+2.	Enter the AWS Account ID, AWS IAM username, and password by copying and pasting the values from the section below.
+
+📝 Note: Avoid the root account login — this lab is configured for IAM users only.
+
+**AWS Account ID**
 ```
 [[ Instruqt-Var key="INSTRUQT_AWS_ACCOUNT_INFOBLOX_DEMO_ACCOUNT_ID" hostname="shell" ]]
 ```
@@ -85,78 +148,47 @@ Select "IAM Account" and enter the **AWS ID**:
 ```
 [[ Instruqt-Var key="INSTRUQT_AWS_ACCOUNT_INFOBLOX_DEMO_PASSWORD" hostname="shell" ]]
 ```
-
 ---
-
-# AZURE Credentials ☁️
-
-**AZURE SUBSCRIPTION**
-```
-[[ Instruqt-Var key="INSTRUQT_AZURE_SUBSCRIPTION_INFOBLOX_TENANT_SUBSCRIPTION_ID" hostname="shell" ]]
-```
-
-**AZURE USERNAME**
-```
-[[ Instruqt-Var key="INSTRUQT_AZURE_SUBSCRIPTION_INFOBLOX_TENANT_USERNAME" hostname="shell" ]]
-```
-
-**AZURE PASSWORD**
-```
-[[ Instruqt-Var key="INSTRUQT_AZURE_SUBSCRIPTION_INFOBLOX_TENANT_PASSWORD" hostname="shell" ]]
-```
-
 
 
 ## 3) Deploy resources onto your cloud regions
 ===
 
-Now that you've logged into the cloud providers consoles its time to deploy resources for upcoming Instruqt Challenges:
+🧱 Deploying the Lab Infrastructure
+
+Now that you’ve logged into both cloud consoles, it’s time to deploy the infrastructure that reflects the architecture shown in the lab diagram.
+
+👉 Switch back to the “>_ Shell” tab in the left-side panel of your Instruqt lab to proceed.
 
 ### 1. Deploy AWS resources in EU
 
 Apply the resources:
 
 ```run
-cd ~/infoblox-lab/Infoblox-PoC/terraform
-terraform apply --auto-approve  -target=module.aws__instances_eu -target=aws_ec2_transit_gateway.eu
+cd ~/infoblox-lab/secure-ai-infoblox/terraform
+terraform apply --auto-approve  -target=module.aws__instances_eu -target=aws_vpn_gateway.vgw
 ```
 
-Build connectivity between VPCs inside the region
-
-```run
-terraform apply --auto-approve  -target=aws_ec2_transit_gateway_route_table.tgw_rt -target=aws_ec2_transit_gateway_vpc_attachment.tgw_attachments -target=aws_ec2_transit_gateway_route_table_association.tgw_rt_associations -target=aws_route.tgw_routes -target=aws_ec2_transit_gateway_route.tgw_routes
-```
-
-Set up the DNS infrastructure with the appropriate VPC associations and A-records as outlined in the lab diagram.
-
-```run
-terraform apply --auto-approve -target=aws_route53_zone.private_zone -target=aws_route53_record.dns_records
-```
-
-### 2. Deploy Azure resources in North Europe
-
-Apply the resources:
-
-```run
-terraform apply --auto-approve -target=module.azure_instances_eu
-```
-
-Build connectivity between Vnets in the region:
-
-```run
-terraform apply --auto-approve -target=azurerm_virtual_network_peering.vnet_peering
-```
-
-Set up the DNS infrastructure with the appropriate VPC associations and A-records as outlined in the lab diagram.
-
-
-```run
-terraform apply --auto-approve -target=azurerm_private_dns_zone.private_dns_azone -target=azurerm_private_dns_zone_virtual_network_link.eu_vnet_links -target=azurerm_private_dns_a_record.eu_dns_records
-```
-
-
-## 4) Create Admin User to your Infoblox Portal Dashboard
+## 4) Enable Amazon Bedrock Model Access in AWS Console
 ===
+
+☁️ Simulated Bedrock Integration (Lab Setup)
+
+> [!IMPORTANT]
+> Note: The steps in this section are titled “Enable Amazon Bedrock Model Access in AWS Console” to mirror real-world configuration. However, in this lab environment, we use a simulated (mock) API endpoint instead of provisioning actual Bedrock access.
+
+The Flask backend is built to integrate with the real AWS Bedrock API (e.g., using boto3 or API Gateway for InvokeModel calls), but for demo purposes:
+	•	✅ No AWS credentials or real Bedrock services are required
+	•	🧪 Mock responses mimic real GenAI output
+	•	🔍 DNS queries simulate real-world behavior for AI-enhanced domains
+
+This approach allows us to effectively demonstrate DNS inspection, threat detection, and policy enforcement via Infoblox, without the overhead of real AWS Bedrock configuration.
+
+
+
+## 5) Create Admin User to your Infoblox Portal Dashboard
+===
+
 
 > [!NOTE]
 > Note: Use your Business Email for User Creation
@@ -192,12 +224,21 @@ Your user account and sandbox have already been created. The next step is to set
 
 ---
 
-
-![Screenshot 2025-04-01 at 11.03.20.png](https://play.instruqt.com/assets/tracks/ywozzymyekgv/bdbf322902db478154c3fece79237f86/assets/Screenshot%202025-04-01%20at%2011.03.20.png)
+![Screenshot 2025-07-18 at 09.16.24.png](https://play.instruqt.com/assets/tracks/uoielkrmzmtm/09e41ec1cf57a6f2cbe5d2c47721a26b/assets/Screenshot%202025-07-18%20at%2009.16.24.png)
 
 ---
 
 ### Section 2
+
+✅ Existing User
+
+1.	Go to Infoblox Portal TAB on the left.
+2.	Login using your existing email address and password.
+3.	Once authenticated, the lab tenant will be automatically added to your list of available tenants (you’ll see it in the top-right tenant switcher).
+
+![Screenshot 2025-07-18 at 09.16.24.png](https://play.instruqt.com/assets/tracks/uoielkrmzmtm/09e41ec1cf57a6f2cbe5d2c47721a26b/assets/Screenshot%202025-07-18%20at%2009.16.24.png)
+
+In order to RESET the password follow the steps below:
 
 1. Please navigate to the Infoblox Portal page by clicking on the Infoblox Portal tab within the Instruqt lab environment. This will direct you to the appropriate login interface.
 2. Once you’re on the Infoblox Portal page, click on “Need Assistance” located at the bottom of the login form.
@@ -219,4 +260,4 @@ Your user account and sandbox have already been created. The next step is to set
 
 ## Time for the Next Challenge
 
-Now we've inspected the playing field its game time. Click **Check**!
+Now we've inspected the playing field its game time. Click **NEXT**!
