@@ -229,11 +229,7 @@ InfobloxDNSLab2025.
 
 - Click **Add Credential**
 ![Jun-23-2025_at_23.46.30-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/43bdbf13333297d12646d12d39553f83/assets/Jun-23-2025_at_23.46.30-image.png)
-- Configure **BGP**
-- enter the Dummy values at  **Neighbor IP Address**  and  **Access Location ASN   as it will be reconfigured.
 - Click **Add Primary Path**
-
-
 
 ![Jun-23-2025_at_23.33.24-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/473b4aed0aa79cd469105096fd782c69/assets/Jun-23-2025_at_23.33.24-image.png)
 - Click **Add Primary Connection**
