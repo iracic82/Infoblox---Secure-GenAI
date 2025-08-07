@@ -25,6 +25,9 @@ tabs:
   title: AWS Console
   type: browser
   hostname: aws
+- title: Infoblox Portal
+  type: browser
+  hostname: infoblox
 - id: 9lqak0lb4ajy
   title: Lab Diagram
   type: browser
