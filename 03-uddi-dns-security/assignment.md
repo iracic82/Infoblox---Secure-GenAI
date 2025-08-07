@@ -340,7 +340,7 @@ Infoblox UDDI Portal provides detailed telemetry and context on every DNS securi
 
 Head over to the Infoblox  UI:
 
-Go to: Monitor → Reports → Security → Security Events
+Go to: Monitor → Reports → Security → Security Activity → Security Events
 
 ![Screenshot 2025-07-04 at 13.54.29.png](https://play.instruqt.com/assets/tracks/uoielkrmzmtm/5896dfdf2f1f3dac503c09eee7e80c76/assets/Screenshot%202025-07-04%20at%2013.54.29.png)
 
@@ -368,7 +368,7 @@ You simulated a modern AI-assisted workflow — and validated that:
 - ✅ Your SOC can now monitor GenAI output at the DNS level — with zero agents, zero endpoint dependency
 
 
-Go to: Monitor → Reports → Security → ThreatView
+Go to: Monitor → Reports → Security → Security Activity →ThreatView
 
 ![Screenshot 2025-07-04 at 13.54.45.png](https://play.instruqt.com/assets/tracks/uoielkrmzmtm/0cf88355b1c72e79266769278bfa87eb/assets/Screenshot%202025-07-04%20at%2013.54.45.png)
 
