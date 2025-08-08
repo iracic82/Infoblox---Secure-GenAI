@@ -119,59 +119,74 @@ To enable and use NIOS-X as a Service perform the following workflow:
 
 
 
-## 1. Create a Service Deployment on Infoblox CSP for NIOS-X as a Service.
+## 1. Create a Service Deployment on Infoblox Portal for NIOS-X as a Service.
 
 
 This portion of the guide is intended to guide Infoblox Portal administrators through the creation of a Service
-Deployment for NIOS-X as a Service. The Service Deployment acts as the point of access for NIOS-X as a
-Service’s DNS, and DNS Security. To create a Service Deployment for NIOS-X as a Service complete the
+Deployment for NIOS-X-as-a-Service. The Service Deployment acts as the point of access for NIOS-X-as-a-
+Service’s DNS, and DNS Security. To create a Service Deployment for NIOS-X-as-a-Service complete the
 following steps:
 1. Navigate to the As-A-Service page of the Infoblox Portal by highlighting **Configure,** clicking **Service Deployment**, then by clicking **As-A-Service** in the navigation panel.
 ![Jun-23-2025_at_21.47.25-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/ef250f39faaa4f82a041b5e648d6f017/assets/Jun-23-2025_at_21.47.25-image.png)
 2. Click **Add Service** near the bottom left of the As-A-Service page.
 ![Jun-23-2025_at_21.48.01-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/60883e25c289b6db671ce943806ac912/assets/Jun-23-2025_at_21.48.01-image.png)
-3.  Give the new Service a **Name**.
+3.  Give the new Service a **Name**  : **Instrqt-SaaS**.
+
+> [!IMPORTANT]
+> NOTE: Service Name - Instrqt-SaaS
+
 ![Jun-23-2025_at_21.55.52-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/f8f237f5620096e2b627957810fc001f/assets/Jun-23-2025_at_21.55.52-image.png)
 4.  (Optional) Input a **Description**.
 ![Jun-23-2025_at_21.56.34-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/e36fbd69cfa831608d16bdcfe579951f/assets/Jun-23-2025_at_21.56.34-image.png)
-5.  Click **Add** on CAPABILITIES option and select each service that NIOS-X as a Service will be serving. Repeat this step for all desired services **DNS and Security**
+5.  Click **Add** on CAPABILITIES option and select each service that NIOS-X-as-a-Service will be serving. Repeat this step for all desired services **DNS and Security**.
 ![Jun-23-2025_at_22.02.25-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/93ab9e2e7e0b83e03438ded03cbde983/assets/Jun-23-2025_at_22.02.25-image.png)
-6.  Select **DNS** here and after that add **Security**
-![Jun-23-2025_at_22.03.23-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/33f711000fbe493d64381cb68e157d03/assets/Jun-23-2025_at_22.03.23-image.png)
-7.  Keep the default settings as they are and click **Add Capability**
-![Jun-23-2025_at_22.04.17-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/b906ab18c269d322d09c2d85b48dc960/assets/Jun-23-2025_at_22.04.17-image.png)
-8.  Switch to **Deployment** tab
+6.  Select **DNS** here.
+![Screenshot 2025-08-07 at 13.31.06.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/7ac935709da3ddf994d4d749035be891/assets/Screenshot%202025-08-07%20at%2013.31.06.png)
+![Screenshot 2025-07-10 at 16.32.17.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/9351147ebbee194d378a0a37e44cd1be/assets/Screenshot%202025-07-10%20at%2016.32.17.png)
+7.  Keep the default settings as they are and click **Add Capability**.
+![Screenshot 2025-07-10 at 16.23.49.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/9142ec33e9893647f058899664683d48/assets/Screenshot%202025-07-10%20at%2016.23.49.png)
+
+8.Click **Add** under CAPABILITIES Section again.
+
+![Screenshot 2025-07-10 at 16.24.10.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/ec67f36955f8fee2001ab3c153698477/assets/Screenshot%202025-07-10%20at%2016.24.10.png)
+
+9.Select **Security** here.
+
+![Screenshot 2025-07-10 at 16.24.20.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/db28a58988abbd1ed863cd17f2ebdf67/assets/Screenshot%202025-07-10%20at%2016.24.20.png)
+
+10.Click **Add Capability** on the bottom.
+
+11.Switch to **Deployment** tab.
 
 > [!IMPORTANT]
 > NOTE: We are still on Add Service Wizard Page
 
 ![Jun-24-2025_at_00.10.26-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/bcb672c7fb25ba1c4245f008e626c27c/assets/Jun-24-2025_at_00.10.26-image.png)
-9.  Select **Add Service Deployment**
+12.  Select **Add Service Deployment**.
 ![Jun-23-2025_at_22.06.11-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/9a8efe0efe962857148c6eb8e4f372f9/assets/Jun-23-2025_at_22.06.11-image.png)
-10.  Give the new Deployment a **Name**.
+13.  Give the new Deployment a **Name**.
 ![Jun-23-2025_at_22.07.32-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/eef25cf3bd06b9bd601de829f62c78f1/assets/Jun-23-2025_at_22.07.32-image.png)
-11.  Configure **Service Location** as given
+14.  Configure **Service Location** as given
 -  **Size** -  Select **S**
 -  **Provider** -  Select **AWS**
 -  **Uncheck** Use Recommended Location
--  **Location** -  **As  preferred  by you**
+-  **Location** -  **Please select Europe/Franfurt** as a location
 
 > [!IMPORTANT]
 > In this Lab we will use AWS Europe eu-central-1 Frankfurt Region.
 
--  **Service IP**- **this will be IP for your NIOSX (DNS resolver IP)** (try to keep it far away from your AWS VPC network CIDR they should not fall in same CIDR )
+-  **Service IP**- **this will be IP for your NIOS-X-as-a-Service (DNS resolver IP)** (This IP must be in a private IP range try to keep it far away from your AWS VPC network CIDR they should not fall in same CIDR. )
 
 > [!IMPORTANT]
 > NOTE: Service IP should be set to 10.10.10.3
 
-Copy Service IP from below into the Infoblox portal
+Copy the Service IP from below and paste it  into the Infoblox Portal
 
 ```
 10.10.10.3
 ```
-
-![Jun-23-2025_at_22.24.50-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/a222b212a541874fcb7354759aa81110/assets/Jun-23-2025_at_22.24.50-image.png)
-12. Configure **Service Location Routing** as given
+![Screenshot 2025-08-07 at 13.41.54.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/6f68cd0c5fdc4e5c1f92e9b98890ceee/assets/Screenshot%202025-08-07%20at%2013.41.54.png)
+15. Configure **Service Location Routing** as given
 - **Routing** -  Select **Dynamic(BGP)**
 - **Service Location ASN**  -  Enter **65500** {Note this value will be used while configuring the CGW on AWS side so remember this}
 - **Primary Source IP **
@@ -180,6 +195,7 @@ Copy Service IP from below into the Infoblox portal
 
 > [!IMPORTANT]
 > NOTE: Primary and Secondary Source IPs should be set retrospectively to 10.10.10.4 and 10.10.10.5.
+> These IPs are used by NIOS-X-as-a-Service for operations such as Zone Transfers and Forwarding. They must also be in a Private IP range.
 
 **Primary Source IP**
 ```
@@ -192,65 +208,43 @@ Copy Service IP from below into the Infoblox portal
 
 
 
-![Jun-23-2025_at_22.28.53-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/cbfd6575a65414cfe8e907e310f12251/assets/Jun-23-2025_at_22.28.53-image.png)
-13.  Configure **Access Location**
+![Screenshot 2025-08-07 at 13.42.47.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/a41b067b60a78b1fc6b2ab047426a7bd/assets/Screenshot%202025-08-07%20at%2013.42.47.png)
+16.  Configure **Access Location**
 - Click **Add**
 - **Provider** -  **AWS**
 - **Type** - **Cloud VPN**
 - **Region** - **Select as Earlier selected Location in Service Deployment**
+
+> [!NOTE]
+> 💡 Need global reach?
+We’re ready to deploy in nearly every major cloud PoP — from AWS, Azure, to GCP — whether it’s Frankfurt, Virginia, or a coffee shop in Tokyo (okay, maybe not the last one… yet 😉).
+
+
 - **Name** -  **name your access location**
-![Jun-23-2025_at_22.37.16-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/b30ee63ea3d4b78900de98bd228d127f/assets/Jun-23-2025_at_22.37.16-image.png)
-14.  Configure **CONNECTION**
-14.1 click **Add Primary**
+![Screenshot 2025-08-07 at 13.47.23.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/75590c5452e625ca4482aa69e4c5a5ad/assets/Screenshot%202025-08-07%20at%2013.47.23.png)
+17.  Configure **CONNECTION**
+17.1 Click **Add Primary**
 ![Jun-23-2025_at_23.18.57-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/6de0d05fa4742d9e6a281a7af4aa4a48/assets/Jun-23-2025_at_23.18.57-image.png)
 - give name to your primary connection
 
 > [!IMPORTANT]
 > ✅ NOTE:Make the name unique for both the Primary  and the  Secondary Connection.
 
-- configure **PATH**
+- configure **Tunnel**
 - click **Add Primary**
-![Jun-23-2025_at_23.21.04-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/9c4b41a974989ff6f43432c4180680f6/assets/Jun-23-2025_at_23.21.04-image.png)
-- Configure **Add Primary Path**
-![Jun-23-2025_at_23.26.16-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/f9122b5e626f3b211dea91ee73e5a23c/assets/Jun-23-2025_at_23.26.16-image.png)
-- **Access IP Address**  -  Give in a dummy IP as we will configure this later again.
+![Screenshot 2025-08-08 at 10.00.08.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/8046778c72f8abf6a43158b6f8957cf4/assets/Screenshot%202025-08-08%20at%2010.00.08.png)
+- Configure **Add Primary Tunnel**
+![Screenshot 2025-08-08 at 10.01.22.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/9a8e391b0ec54e8c05ca66b47dbd66e8/assets/Screenshot%202025-08-08%20at%2010.01.22.png)
+- **Tunnel Outside IP**  -  Input a placeholder IP as we will return to this panel and configure this.
 - Click  **Add Credential**
 - Select **New**
 ![Jun-23-2025_at_23.27.38-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/bebd8949b63de9bc605f58dabbd0dc64/assets/Jun-23-2025_at_23.27.38-image.png)
 - **Name** - any string is fine but you cannot repeat them while adding it on an another connection
 - **Description**  -  enter your desired description
-- **Pre-shared Key**  -  Please enter at least 16 characters Value must contain at least one special character either a underscore(_) or a dot (.) {remember this value as it will be used to configure the AWS VPN}
+- **Pre-shared Key**   – Use the Pre-Shared Key below.
 
-Pre-shared key value for the lab you can find below:
-
-```
-InfobloxDNSLab2025.
-```
-
-- Click **Add Credential**
-![Jun-23-2025_at_23.46.30-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/43bdbf13333297d12646d12d39553f83/assets/Jun-23-2025_at_23.46.30-image.png)
-- Click **Add Primary Path**
-
-![Jun-23-2025_at_23.33.24-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/473b4aed0aa79cd469105096fd782c69/assets/Jun-23-2025_at_23.33.24-image.png)
-- Click **Add Primary Connection**
-![Jun-23-2025_at_23.33.40-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/9a26d9c5857aa778823016db47fca9b8/assets/Jun-23-2025_at_23.33.40-image.png)
-14.2 Click **Add Secondary**
-![Jun-23-2025_at_23.41.20-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/341cc0537721ae693255e72b7a45a9e5/assets/Jun-23-2025_at_23.41.20-image.png)
-- give name to your secondary connection
-
-> [!IMPORTANT]
-> ✅ NOTE:Make the name unique for both the Primary  and the  Secondary Connection.
-
-- configure **PATH**
-- click **Add Secondary**
-![Jun-23-2025_at_23.42.48-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/30268ed660cd4bb79353427fd892c92c/assets/Jun-23-2025_at_23.42.48-image.png)
-- **Access IP Address**  -  Give in a dummy IP as we will configure this later again.
-- Click  **Add Credential**
-- Select **New**
-![Jun-23-2025_at_23.44.36-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/de93ac2733f1895567a7d6f612f86f1f/assets/Jun-23-2025_at_23.44.36-image.png)
-- **Name** - any string is fine but you cannot repeat them while adding it on an another connection
-- **Description**  -  enter your desired description
-- **Pre-shared Key**  -  Please enter at least 16 characters Value must contain at least one special character either a dash(_) or a dot (.) {remember this value as it will be used to configure the AWS VPN}
+> [!NOTE]
+> Note: the Pre-Shared key must be at least 16 characters and contain a special character (characters + and & are porhibited), this Pre-Shared Key will be used again in AWS.
 
 Pre-shared key value for the lab you can find below:
 
@@ -261,27 +255,77 @@ InfobloxDNSLab2025.
 - Click **Add Credential**
 ![Jun-23-2025_at_23.46.30-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/43bdbf13333297d12646d12d39553f83/assets/Jun-23-2025_at_23.46.30-image.png)
 - Configure **BGP**
-- enter the Dummy values at  **Neighbor IP Address**  and  **Access Location ASN   as it will be reconfigured.
-- Click **Add Secondary Path**
-![Jun-23-2025_at_23.48.19-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/df4fae96328440b4d55dfa99199929ef/assets/Jun-23-2025_at_23.48.19-image.png)
+- enter the placeholder values at  **Inside IPv4 CIDR**  and  **Access Location ASN**   as it will be reconfigured.
+- Click **Add Primary Tunnel**
+![Screenshot 2025-08-08 at 10.03.28.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/8aefc8c1eb02aaaaded59ceaff9ec17e/assets/Screenshot%202025-08-08%20at%2010.03.28.png)
 - Click **Add Primary Connection**
+![Jun-23-2025_at_23.33.40-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/9a26d9c5857aa778823016db47fca9b8/assets/Jun-23-2025_at_23.33.40-image.png)
+17.2 Click **Add Secondary**
+![Jun-23-2025_at_23.41.20-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/341cc0537721ae693255e72b7a45a9e5/assets/Jun-23-2025_at_23.41.20-image.png)
+- give name to your secondary connection
+
+> [!IMPORTANT]
+> ✅ NOTE:Make the name unique for both the Primary  and the  Secondary Connection.
+
+- configure **Tunnel**
+- click **Add Secondary**
+![Screenshot 2025-08-08 at 10.04.15.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/b10ce1db09d998ad8566d119c89c3ff6/assets/Screenshot%202025-08-08%20at%2010.04.15.png)
+- **Tunnel Outside IP**  -  Input a placeholder IP as we will configure this later again.
+- Click  **Add Credential**
+- Select **New**
+![Jun-23-2025_at_23.44.36-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/de93ac2733f1895567a7d6f612f86f1f/assets/Jun-23-2025_at_23.44.36-image.png)
+- **Name** - any string is fine but you cannot repeat them while adding it on an another connection
+- **Description**  -  enter your desired description
+- **Pre-shared Key**  - Use the Pre-Shared Key below.
+
+> [!NOTE]
+> Note: the Pre-Shared key must be at least 16 characters and contain a special character (characters + and & are porhibited), this Pre-Shared Key will be used again in AWS.
+
+
+Pre-shared key value for the lab you can find below:
+
+```
+InfobloxDNSLab2025.
+```
+
+- Click **Add Credential**
+![Jun-23-2025_at_23.46.30-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/43bdbf13333297d12646d12d39553f83/assets/Jun-23-2025_at_23.46.30-image.png)
+- Configure **BGP**
+- enter the Dummy values at  **Inside IPv4 CIDR**  and  **Access Location ASN**   as it will be reconfigured.
+![Screenshot 2025-08-08 at 10.05.46.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/94d528496651f10cb298ca3c80a6bdcf/assets/Screenshot%202025-08-08%20at%2010.05.46.png)
+- Click **Add Secondary Tunnel**
+![Screenshot 2025-08-08 at 10.05.53.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/410eb0aca7ce1098481e67670752f56b/assets/Screenshot%202025-08-08%20at%2010.05.53.png)
+- Click **Add Secondary Connection**
 ![Jun-23-2025_at_23.48.39-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/20187257b5fabe28df90fa9b985e8a04/assets/Jun-23-2025_at_23.48.39-image.png)
 - Finally click **Add Location**
 ![Jun-23-2025_at_23.49.59-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/0292d885d013c51a6b63219811845420/assets/Jun-23-2025_at_23.49.59-image.png)
 - Click **Add Deployment*
 ![Jun-23-2025_at_23.50.51-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/3c81136d742b21361dd092d245fcdf53/assets/Jun-23-2025_at_23.50.51-image.png)
-15.  Click **save** to save changes
+18.  Click **Save** to save all changes
+
+> [!NOTE]
+> 📝 NOTE:
+After editing the instructions, make sure to save your changes. To reveal the “Save Changes” button scroll around the portal using the trackpad or mouse until the button appears.
+The button may be hidden by default depending on screen size or browser zoom level.
+
 ![Jun-23-2025_at_23.51.38-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/48c0f3e058adfa068d6b08f800a4b348/assets/Jun-23-2025_at_23.51.38-image.png)
-16.  Refresh the Webpage
-17.  you will see a Ready Status here
+19.  Wait approximately 3 minutes, then Refresh the Webpage
+20.  Once the NIOS-X-as-a-Service deployment is ready, you will see a Ready Status here
 ![Jun-24-2025_at_00.03.36-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/925ad34b8029024c613494d7a41feedd/assets/Jun-24-2025_at_00.03.36-image.png)
-18.  Click on the hyperlink below Location and notice **SERVICE DEPLOYMENT** details
+21.  Click on the hyperlink below Location and notice **SERVICE DEPLOYMENT** details
 ![Jun-24-2025_at_00.04.40-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/56e6f0c45581dc1c4d9f6ecf2c20263c/assets/Jun-24-2025_at_00.04.40-image.png)
-19.  You Notice and copy these **Cloud Service IP** on your screen {will be used later}
+22.  Copy these Cloud Service IPs located in the Service Deployment panel, these { will be used later.}
 
 > [!IMPORTANT]
-> Note: Cloud Service IPs may take up to 5 minutes to appear. Please refresh the page periodically and allow time for propagation.
+> Note: Cloud Service IPs may take up to 5 minutes to appear. Please refresh the page periodically and allow time for propagation NIOS-X-as-a-Service’s deployment process to complete.
 
+🔍 Heads-Up!
+
+If you’re unable to see the Cloud Service IP under the Service Deployment section, it might be due to your screen resolution or window size.
+
+✅ Try minimizing the guide or dragging it to the right to reveal the full Infoblox Portal view.
+
+On smaller screens or in split view, this section might be partially hidden — especially on iPads or laptops. Make sure you’re in full-screen mode for best visibility.
 
 ## 2. Configuring AWS
 
@@ -298,42 +342,49 @@ This is required to ensure that the Customer Gateways and subsequent VPN configu
 
 Once you’re in the correct region, proceed to create the Customer Gateways as outlined.
 
-1. Now we will create 2 x  **Costumer Gateways**.
+1. Now we will create 2 x  **Customer Gateways**.
 2. Go to Virtual private network (VPN)>Customer gateways.
-3. Click on **Create Costumer Gateway**.(creating the first CGW )
+3. Create the first gateway. Click on **Create Costumer Gateway**
 ![Jun-24-2025_at_00.51.52-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/c60386be95ea7d93eedef258630122df/assets/Jun-24-2025_at_00.51.52-image.png)
-4. Fill in Details as mentioned below
-- **Name tag** - name for you CGW (optional).
+4. Input the following as mentioned below:
+- **Name tag** - input a name for you CGW
+> [!NOTE]
+> Note: Input an easy to remember name as we will be using this Customer Gateway in future steps
 - **BGP ASN** - give the BGP same value as you have given in step 12 at Service Location ASN : **65500**
 - **IP Address** -  this will be the value of first IP in Cloud Service IP under Service Deployment.(These are the Public IPs)
 - Fill in the option fields if you wish to
 ![Jun-24-2025_at_10.39.43-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/86f6db94075cc1e20e596f538aba50a6/assets/Jun-24-2025_at_10.39.43-image.png)
-5. Click on **Create Costumer Gateway**.(creating the second CGW )
+5. Click Create customer gateway to finalize the creation of the first Customer Gateway.
+6. Create the Second gateway. Click on Create Customer Gateway.
 ![Jun-24-2025_at_00.51.52-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/c60386be95ea7d93eedef258630122df/assets/Jun-24-2025_at_00.51.52-image.png)
-6. Fill in Details as mentioned below
-- **Name tag** - name for you CGW (optional).
+7. Input the following as mentioned below:
+- **Name tag** - input a name for your CGW.
+> [!NOTE]
+> Note input an easy to remember name as we will be using this Customer Gateway in future steps.
+
 - **BGP ASN** - give the BGP same value as you have given in step 12 of 1 at Service Location ASN : **65500**
 - **IP Address** -  this will be the value of second IP in Cloud Service IP under Service Deployment.
 - Fill in the option fields if you wish to
 ![Jun-24-2025_at_10.41.58-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/b15aa64ce0606207cb8d4db2101deb79/assets/Jun-24-2025_at_10.41.58-image.png)
 
-> [!NOTE]
-> Select Create Customer Gateway to complete provisioning of the second CGW instance.
+8. Select Create Customer Gateway to complete provisioning of the second CGW instance.
 
-7. Now you will be creating two **Site-to-Site VPN connections**
+9. Now you will be creating two **Site-to-Site VPN connections**
 
 In the AWS Console, use the search bar at the top and type VPC, then click on the VPC service.
+
 🔹 Make sure you are in the eu-west-2 region, as shown in the lab diagram.
 
-8. Go to Virtual Private Network (VPN) --> Site-to-Site VPN connections.
-9. Creating First Site-to-Site VPN connections
+10. Go to the Virtual Private Cloud ( VPC ) then scroll down in the left side panel to click  --> Site-to-Site VPN connections under the Virual Private Network (VPN) header.
+11. To Create the first Site-to-Site VPN connections complete the following steps:
 - Click **Create VPN Connection**
 ![Jun-24-2025_at_11.09.24-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/887cac81f291c1b356a2ed488118be2d/assets/Jun-24-2025_at_11.09.24-image.png)
 - **Name tag - optional** - enter the name for your VPN connection
-- **Target gateway type** - keep it as **Virtual private gateway** and select the one available from the drop down menu
-      > [!NOTE]
+- **Target gateway type** - keep it as **Virtual private gateway** and select the one available from the drop-down menu
+
 > NOTE: VGW name is VGW-Lab
-- **Customer gateway** -  keep it as **Existing** and select the one you created in step 10 of 2
+
+- **Customer gateway** -  keep it as **Existing** and select first CGW that was created in this lab.
 - **Routing options**-  keep it as **Dynamic (requires BGP)**
 - **Pre-shared key storage** - keep it as **Standard**
 ![Jun-24-2025_at_11.18.26-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/26f273e7c0200545603725645567f84a/assets/Jun-24-2025_at_11.18.26-image.png)
@@ -349,18 +400,26 @@ In the AWS Console, use the search bar at the top and type VPC, then click on th
 169.254.21.0/30
 ```
 
-- **Pre-shared key for tunnel 1** - Entered the key from step 14.1 of 1
+- **Pre-shared key for tunnel 1**
+
+```
+InfobloxDNSLab2025.
+```
+
 - **Advanced options for tunnel 1** -  Select **Edit tunnel 1 options**
 - leave all the options as they are
 - **Startup Action** -  **Start**
 - Click **Create VPN connection**
 ![Jun-24-2025_at_11.26.07-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/5f84fcebd0715247a709046e527a514e/assets/Jun-24-2025_at_11.26.07-image.png)
-10. Creating Second Site-to-Site VPN connections
+12. Creating Second Site-to-Site VPN connections
 - Click **Create VPN Connection**
 ![Jun-24-2025_at_11.09.24-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/887cac81f291c1b356a2ed488118be2d/assets/Jun-24-2025_at_11.09.24-image.png)
 - **Name tag - optional** - enter the name for your VPN connection
-- **Target gateway type** - keep it as **Virtual private gateway** and select the one you created in step 14 of 2
-- **Customer gateway** -  keep it as **Existing** and select the one you created in step 12 of 2
+- **Target gateway type** - keep it as **Virtual private gateway** and select select the one available from the drop-down menu
+
+> NOTE: VGW name is VGW-Lab
+
+- **Customer gateway** -  keep it as **Existing** and select the second CGW that was created in this lab.
 - **Routing options**-  keep it as **Dynamic (requires BGP)**
 - **Pre-shared key storage** - keep it as **Standard**
 ![Jun-24-2025_at_11.38.36-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/f8638d4a2a56c50366551989c43970a8/assets/Jun-24-2025_at_11.38.36-image.png)
@@ -375,7 +434,13 @@ In the AWS Console, use the search bar at the top and type VPC, then click on th
 169.254.22.0/30
 ```
 
-- **Pre-shared key for tunnel 1** - Entered the key from step 14.2 of 1
+- **Pre-shared key for tunnel 1**
+
+```
+InfobloxDNSLab2025.
+```
+
+
 - **Advanced options for tunnel 1** ---->. Select **Edit tunnel 1 options**
 -** leave all the options as they are**
 - **Startup Action** -  **Start**
@@ -391,21 +456,21 @@ In the AWS Console, use the search bar at the top and type VPC, then click on th
 ![Jun-24-2025_at_11.26.07-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/5f84fcebd0715247a709046e527a514e/assets/Jun-24-2025_at_11.26.07-image.png)
 
 
-11. Enable the Route Propogation on your VPC
-12. Go to VPC
-13. Select the section **Route Tables**
+13. Enable the Route Propogation on your VPC
+14. Go to VPC
+15. Select the section **Route Tables**
 
 ![Screenshot 2025-07-01 at 09.21.35.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/15c8a261a0fe9f3066f46ddf9d156ef5/assets/Screenshot%202025-07-01%20at%2009.21.35.png)
 
-14. Go to **Route Propagation** tab
+16. Go to **Route Propagation** tab
 ![Jun-24-2025_at_11.55.27-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/ccc94a5ade7ceace6a2a67c48cbaee92/assets/Jun-24-2025_at_11.55.27-image.png)
-15. Click **Edit Route Propagation**
+17. Click **Edit Route Propagation**
 ![Jun-24-2025_at_11.57.03-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/3ddbbb4a393067f373d1ae9baf77e6a2/assets/Jun-24-2025_at_11.57.03-image.png)
-16. Check **Enable** and hit **Save**
+18. Check **Enable** and hit **Save**
 ![Jun-24-2025_at_11.57.48-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/ae65906796d6f59133ef5e56e9ab6324/assets/Jun-24-2025_at_11.57.48-image.png)
 
 
-## 3.  Establish an IPsec tunnel between a AWS VPN and Infoblox(Re-Config).
+## 3.  Establish an IPsec tunnel between an AWS VPN and Infoblox(Re-Config).
 
 1. In your AWS console go to Site-to-Site VPN connections
 2. Go to Tunnel-1 that you configured in step 23 of 2
@@ -430,22 +495,22 @@ To complete the IPsec setup, you’ll need to fetch the outside IP address for T
 - Under Tunnel 1, look for the field labeled Outside IP Address.
 
 3. Copy **Outside IP address** of Tunnel-1
-4. Log in to your Infoblox Portal again and navigate to  Configure >Service Deployment >As-A-Service > **Your service**
-5. Click on three dots in front of your **service name** and click edit
+4. Log in to your Infoblox Portal again and navigate to  Configure >Service Deployment >As-A-Service
+5. Click on three dots associated with your NIOS-X-as-a-Service deployment service name and click Edit
 ![Jun-24-2025_at_12.06.47-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/91cf73f8583026f6103666275ac94d88/assets/Jun-24-2025_at_12.06.47-image.png)
-6. Click on three dots in front of your **SERVICE DEPLOYMENTS** and click edit
+6. Click on three dots in front of your service deployment in the Service Deployments panel and click Edit.
 ![Jun-24-2025_at_12.07.10-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/adad18ceee12e2a5453f289c6db0477b/assets/Jun-24-2025_at_12.07.10-image.png)
-7. In the **Access Location** click on the drop downs and select your Access Location and click on three dots and select edit.
+7. In the **Access Location** click on the drop downs and select your Access Location and click on three dots and select Edit.
 ![Jun-24-2025_at_13.28.08-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/a8a1c78ace9b0fe54bb76cb7ae79a60e/assets/Jun-24-2025_at_13.28.08-image.png)
 8. On **Edit Access Location window** select **Primary Connection**
 ![Jun-24-2025_at_13.29.19-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/9a91abda47aedd83ab9f691e81024933/assets/Jun-24-2025_at_13.29.19-image.png)
-9. In PATH select Primary
-![Jun-24-2025_at_13.29.59-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/003a521643951450f9ba3d3a5bf78784/assets/Jun-24-2025_at_13.29.59-image.png)
-10. Change Access IP Address as **Outside IP address** of Tunnel-1   of VPN-1 from step 3 of 3
-11. On **BGP** in **Neighbor IP Address**   update the **Inside IPv4 CIDR** of Tunnel-1 on AWS side.
+9. Under the Connection header click Primary.
+![Screenshot 2025-08-08 at 10.27.59.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/8684a9ab0849ad5363a96c77d8e8d060/assets/Screenshot%202025-08-08%20at%2010.27.59.png)
+10. Change the Inside IPv4 CIDR to the  **Outside IP address** of Tunnel-1   of VPN-1from step 3 of 3
+11. On **BGP** in **Inside IPv4 CIDR**   update the **Inside IPv4 CIDR** of Tunnel-1 on AWS side.
 
 > [!IMPORTANT]
-	> NOTE: Neighbor IP is 169.254.21.1
+	> NOTE: Inside IPv4 CIDR is 169.254.21.1/30
 
 13. For **Access Location ASN** copy paste the value from **Amazon ASN**  **64512**
 
@@ -453,28 +518,24 @@ To complete the IPsec setup, you’ll need to fetch the outside IP address for T
 64512
 ```
 
-14. Click Edit Primary Path
-![Jun-24-2025_at_13.35.42-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/a967dd664f3562de2106e09d89f926a4/assets/Jun-24-2025_at_13.35.42-image.png)
+![Screenshot 2025-08-08 at 10.29.20.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/b0f84a150264779463c4f958df747784/assets/Screenshot%202025-08-08%20at%2010.29.20.png)
+
+14. Click Edit Primary Tunnel
+![Screenshot 2025-08-08 at 10.29.44.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/8e10e7dbb55d7cffbf796bbf65a5791e/assets/Screenshot%202025-08-08%20at%2010.29.44.png)
 15. Click Edit Primary Connection
 ![Jun-24-2025_at_13.35.58-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/4f432f179e2ae47dd1d294d8cf50b54a/assets/Jun-24-2025_at_13.35.58-image.png)
 16. On **Edit Access Location window** select **Secondary Connection**
 ![Jun-24-2025_at_13.37.15-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/cd5fdbf2ce9f6acdada6a4de379e0b8d/assets/Jun-24-2025_at_13.37.15-image.png)
-17. In PATH select Secondary
-![Jun-24-2025_at_13.37.54-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/7c2a4fceec55690705047d0bcc776f99/assets/Jun-24-2025_at_13.37.54-image.png)
-18. Change Access IP Address as **Outside IP address** of Tunnel-1   of VPN-2 from step 3 of 3
-19. On **BGP** in **Neighbor IP Address**   update the **Inside IPv4 CIDR** of Tunnel-1 of VPN-2 on AWS side.
+17. Under the Tunnel header, click Secondary
+![Screenshot 2025-08-08 at 10.30.37.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/2abeb04604b20cad3824d30790843c3b/assets/Screenshot%202025-08-08%20at%2010.30.37.png)
+18. Change Tunnel Outside IP as **Outside IP address** of Tunnel-1 of VPN-2 from step 3 of 3
+19. Under the BGP header change the Inside IPv4 CIDR to the  Inside IPv4 CIDR of Tunnel-1 of VPN-2 on AWS side.
 
 > [!IMPORTANT]
-> NOTE: Neighbor IP is 169.254.22.1
+> NOTE: Neighbor IP is 169.254.22.1/30
 
-20.For **Access Location ASN** copy paste the value from **Amazon ASN**  **64512**
-
-```
-64512
-```
-
-20.  Click Edit Secondary Path
-![Jun-24-2025_at_13.47.38-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/6eaa5395975a2913394d52224a734657/assets/Jun-24-2025_at_13.47.38-image.png)
+20.  Click Edit Secondary Tunnel
+![Screenshot 2025-08-08 at 10.30.58.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/7368af1152702ac69d6bd312a2118db8/assets/Screenshot%202025-08-08%20at%2010.30.58.png)
 21. Click Edit Secondary Connection
 ![Jun-24-2025_at_13.49.11-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/54e8706e0a06c6ce3a9d9d1d2cb3d9c9/assets/Jun-24-2025_at_13.49.11-image.png)
 22. Click Update Location
@@ -492,14 +553,22 @@ To complete the IPsec setup, you’ll need to fetch the outside IP address for T
 
 1. On the Infoblox CSP tenant side you will see a green square and connected as status in front of your Access Location under SERVICE STATUS which indicates the service is UP
 ![Jun-24-2025_at_14.10.05-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/a9b8a0d64a181aea6f7e4ec787c48f15/assets/Jun-24-2025_at_14.10.05-image.png)
-2. On AWS console go to VPC and section Route Tables and select **WebSvcsProdEu1-RT** route table
-3. In Routes you must see the Service IPs - **Service IP: 10.10.10.3**
-![Jun-24-2025_at_14.32.04-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/39a9d2ebe179aca2923194d7f89ac9c4/assets/Jun-24-2025_at_14.32.04-image.png)
-4. On AWS console go to Site-to-Site VPN connections and then navigate to VPN-1 that you created
-5. Notice the Tunnel state in Tunnel details  for Tunnel 1 status should be Up
+2. In the AWS Console, go to VPC → Route Tables, then scroll or search to select **WebSvcsProdEu1-RT**.
+
+![Screenshot 2025-07-25 at 10.54.09.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/f3345ccd0afee74a59f68e7187debf61/assets/Screenshot%202025-07-25%20at%2010.54.09.png)
+
+4. In Routes you must see the Service IPs - **Service IP: 10.10.10.3**
+
+> [!NOTE]
+> 📝 NOTE:
+A page refresh may be required if changes don’t appear immediately. For example, after switching to the route tables, the expected options might not show up until the page is refreshed. Refreshing ensures the UI reflects the latest state.
+
+![Screenshot 2025-08-08 at 10.56.32.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/ed8a26f3dc9c87584f57b4e7bea26b26/assets/Screenshot%202025-08-08%20at%2010.56.32.png)
+5. On AWS console go to Site-to-Site VPN connections and then navigate to VPN-1 that you created
+6. Notice the Tunnel state in Tunnel details  for Tunnel 1 status should be Up
 ![Jun-24-2025_at_14.34.39-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/4c3b11b9e18ae30daa9dcefa725c5722/assets/Jun-24-2025_at_14.34.39-image.png)
-6. On AWS console go to Site-to-Site VPN connections and then navigate to VPN-2 that you created
-7. Notice the Tunnel state in Tunnel details  for Tunnel 1 status should be Up
+7. On AWS console go to Site-to-Site VPN connections and then navigate to VPN-2 that you created
+8. Notice the Tunnel state in Tunnel details  for Tunnel 1 status should be Up
 ![Jun-24-2025_at_14.37.05-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/e889d9b41101f6f259e2117185fc2700/assets/Jun-24-2025_at_14.37.05-image.png)
 
 
