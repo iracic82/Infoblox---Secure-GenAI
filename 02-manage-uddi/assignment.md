@@ -534,17 +534,23 @@ To complete the IPsec setup, you’ll need to fetch the outside IP address for T
 > [!IMPORTANT]
 > NOTE: Neighbor IP is 169.254.22.1/30
 
-20.  Click Edit Secondary Tunnel
+
+20. For **Access Location ASN** copy paste the value from **Amazon ASN**  **64512**.
+
+```
+64512
+```
+21.  Click Edit Secondary Tunnel
 ![Screenshot 2025-08-08 at 10.30.58.png](https://play.instruqt.com/assets/tracks/26xnz6aweydm/7368af1152702ac69d6bd312a2118db8/assets/Screenshot%202025-08-08%20at%2010.30.58.png)
-21. Click Edit Secondary Connection
+22. Click Edit Secondary Connection
 ![Jun-24-2025_at_13.49.11-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/54e8706e0a06c6ce3a9d9d1d2cb3d9c9/assets/Jun-24-2025_at_13.49.11-image.png)
-22. Click Update Location
+23. Click Update Location
 ![Jun-24-2025_at_13.50.15-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/38458b7ba2911d35a03df65b7a6b2dfa/assets/Jun-24-2025_at_13.50.15-image.png)
-23. Click Update
+24. Click Update
 ![Jun-24-2025_at_13.50.40-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/b7ed57f432cb1517ec75b2b46eecb834/assets/Jun-24-2025_at_13.50.40-image.png)
-24. Click Save
+25. Click Save
 ![Jun-24-2025_at_13.51.04-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/55d40f83c2d3f76ec00fb089450b31f7/assets/Jun-24-2025_at_13.51.04-image.png)
-25. Now you should see a green square and connected as status in front of your Access Location under SERVICE STATUS
+26. Now you should see a green square and connected as status in front of your Access Location under SERVICE STATUS
 ![Jun-24-2025_at_14.10.05-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/a9b8a0d64a181aea6f7e4ec787c48f15/assets/Jun-24-2025_at_14.10.05-image.png)
 
 
