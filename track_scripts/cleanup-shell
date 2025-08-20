@@ -20,6 +20,13 @@ cd /root/infoblox-lab/secure-ai-infoblox/scripts || {
 # python3 delete_azure_credential_from_file.py || echo "⚠️ delete_azure_credential_from_file.py failed"
 # sleep 10
 
+sleep 10
+
+echo "🔧 Running purge_discovery_jobs.py"
+python3 purge_discovery_jobs.py || echo "⚠️ purge_discovery_jobs.py failed, continuing..."
+
+sleep 10
+
 echo "🔧 Running delete_sandbox.py"
 python3 delete_sandbox.py || echo "⚠️ delete_sandbox.py failed, continuing..."
 
