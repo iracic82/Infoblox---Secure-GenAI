@@ -351,8 +351,16 @@ This is required to ensure that the Customer Gateways and subsequent VPN configu
 Once you’re in the correct region, proceed to create the Customer Gateways as outlined.
 
 1. Now we will create 2 x  **Customer Gateways**.
-2. Go to Virtual private network (VPN)>Customer gateways.
-3. Create the first gateway. Click on **Create Costumer Gateway**
+2. Log in to the AWS Management Console.
+3. In the search bar at the top, type VPC.
+
+![Screenshot 2025-08-22 at 10.40.31.png](https://play.instruqt.com/assets/tracks/uoielkrmzmtm/fe839b93da867596f9fa4cd3f9b66271/assets/Screenshot%202025-08-22%20at%2010.40.31.png)
+
+4.  On the left-hand navigation panel (sidebar), scroll down.Look for the section “Virtual Private Network (VPN)”.
+
+![Screenshot 2025-08-22 at 10.43.47.png](https://play.instruqt.com/assets/tracks/uoielkrmzmtm/c8a7b2669ddc906585853f310902dc85/assets/Screenshot%202025-08-22%20at%2010.43.47.png)
+
+6. Create the first gateway. Click on **Create Costumer Gateway**
 ![Jun-24-2025_at_00.51.52-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/c60386be95ea7d93eedef258630122df/assets/Jun-24-2025_at_00.51.52-image.png)
 4. Input the following as mentioned below:
 - **Name tag** - input a name for you CGW
