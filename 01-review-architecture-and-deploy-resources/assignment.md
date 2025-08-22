@@ -178,9 +178,9 @@ terraform apply --auto-approve  -target=module.aws__instances_eu -target=aws_vpn
 > Note: The steps in this section are titled “Enable Amazon Bedrock Model Access in AWS Console” to mirror real-world configuration. However, in this lab environment, we use a simulated (mock) API endpoint instead of provisioning actual Bedrock access.
 
 The Flask backend is built to integrate with the real AWS Bedrock API (e.g., using boto3 or API Gateway for InvokeModel calls), but for demo purposes:
-	•	✅ No AWS credentials or real Bedrock services are required
-	•	🧪 Mock responses mimic real GenAI output
-	•	🔍 DNS queries simulate real-world behavior for AI-enhanced domains
+- ✅ No AWS credentials or real Bedrock services are required
+- 🧪 Mock responses mimic real GenAI output
+- 🔍 DNS queries simulate real-world behavior for AI-enhanced domains
 
 This approach allows us to effectively demonstrate DNS inspection, threat detection, and policy enforcement via Infoblox, without the overhead of real AWS Bedrock configuration.
 
