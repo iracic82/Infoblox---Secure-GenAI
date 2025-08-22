@@ -142,9 +142,13 @@ Instrqt-SaaS
 ![Jun-23-2025_at_21.55.52-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/f8f237f5620096e2b627957810fc001f/assets/Jun-23-2025_at_21.55.52-image.png)
 4.  (Optional) Input a **Description**.
 ![Jun-23-2025_at_21.56.34-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/e36fbd69cfa831608d16bdcfe579951f/assets/Jun-23-2025_at_21.56.34-image.png)
-5.  Click **Add** on CAPABILITIES option and select each service that NIOS-X-as-a-Service will be serving. Repeat this step for all desired services **DNS and Security**.
+5.  Click **Add** on CAPABILITIES option.
 ![Jun-23-2025_at_22.02.25-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/93ab9e2e7e0b83e03438ded03cbde983/assets/Jun-23-2025_at_22.02.25-image.png)
 6.  Select **DNS** here.
+
+> [!IMPORTANT]
+> Note: We’ll be selecting DNS and Security services that NIOS-X-as-a-Service will be serving. Security service is disabled in first instance, but you’ll be able to select it once you’ve added DNS service.
+
 ![Screenshot 2025-08-07 at 13.31.06.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/7ac935709da3ddf994d4d749035be891/assets/Screenshot%202025-08-07%20at%2013.31.06.png)
 ![Screenshot 2025-07-10 at 16.32.17.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/9351147ebbee194d378a0a37e44cd1be/assets/Screenshot%202025-07-10%20at%2016.32.17.png)
 7.  Keep the default settings as they are and click **Add Capability**.
