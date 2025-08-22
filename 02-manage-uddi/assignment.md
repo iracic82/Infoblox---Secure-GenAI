@@ -368,7 +368,7 @@ Once you’re in the correct region, proceed to create the Customer Gateways as 
 > Note: Input an easy to remember name as we will be using this Customer Gateway in future steps
 - **BGP ASN** - give the BGP same value as you have given in step 12 at Service Location ASN : **65500**
 - **IP Address** -  this will be the value of first IP in Cloud Service IP under Service Deployment.(These are the Public IPs)
-- Fill in the option fields if you wish to
+- **Optional** Fill in the option fields if you wish to -
 ![Jun-24-2025_at_10.39.43-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/86f6db94075cc1e20e596f538aba50a6/assets/Jun-24-2025_at_10.39.43-image.png)
 7. Click Create customer gateway to finalize the creation of the first Customer Gateway.
 8. Create the Second gateway. Click on Create Customer Gateway.
