@@ -489,7 +489,7 @@ InfobloxDNSLab2025.
 ## 3.  Establish an IPsec tunnel between an AWS VPN and Infoblox(Re-Config).
 
 1. In your AWS console go to Site-to-Site VPN connections
-2. Go to Tunnel-1 that you configured in step 23 of 2
+2. Go to Tunnel-1 that you configured in the previous steps.
 
 🌐 Retrieve Tunnel 1 Outside IP (AWS)
 
