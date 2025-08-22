@@ -360,9 +360,9 @@ Once you’re in the correct region, proceed to create the Customer Gateways as 
 
 ![Screenshot 2025-08-22 at 10.43.47.png](https://play.instruqt.com/assets/tracks/uoielkrmzmtm/c8a7b2669ddc906585853f310902dc85/assets/Screenshot%202025-08-22%20at%2010.43.47.png)
 
-6. Create the first gateway. Click on **Create Costumer Gateway**
+5. Create the first gateway. Click on **Create Costumer Gateway**
 ![Jun-24-2025_at_00.51.52-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/c60386be95ea7d93eedef258630122df/assets/Jun-24-2025_at_00.51.52-image.png)
-4. Input the following as mentioned below:
+6. Input the following as mentioned below:
 - **Name tag** - input a name for you CGW
 > [!NOTE]
 > Note: Input an easy to remember name as we will be using this Customer Gateway in future steps
@@ -370,10 +370,10 @@ Once you’re in the correct region, proceed to create the Customer Gateways as 
 - **IP Address** -  this will be the value of first IP in Cloud Service IP under Service Deployment.(These are the Public IPs)
 - Fill in the option fields if you wish to
 ![Jun-24-2025_at_10.39.43-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/86f6db94075cc1e20e596f538aba50a6/assets/Jun-24-2025_at_10.39.43-image.png)
-5. Click Create customer gateway to finalize the creation of the first Customer Gateway.
-6. Create the Second gateway. Click on Create Customer Gateway.
+7. Click Create customer gateway to finalize the creation of the first Customer Gateway.
+8. Create the Second gateway. Click on Create Customer Gateway.
 ![Jun-24-2025_at_00.51.52-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/c60386be95ea7d93eedef258630122df/assets/Jun-24-2025_at_00.51.52-image.png)
-7. Input the following as mentioned below:
+9. Input the following as mentioned below:
 - **Name tag** - input a name for your CGW.
 > [!NOTE]
 > Note input an easy to remember name as we will be using this Customer Gateway in future steps.
@@ -383,16 +383,16 @@ Once you’re in the correct region, proceed to create the Customer Gateways as 
 - Fill in the option fields if you wish to
 ![Jun-24-2025_at_10.41.58-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/b15aa64ce0606207cb8d4db2101deb79/assets/Jun-24-2025_at_10.41.58-image.png)
 
-8. Select Create Customer Gateway to complete provisioning of the second CGW instance.
+10. Select Create Customer Gateway to complete provisioning of the second CGW instance.
 
-9. Now you will be creating two **Site-to-Site VPN connections**
+11. Now you will be creating two **Site-to-Site VPN connections**
 
 In the AWS Console, use the search bar at the top and type VPC, then click on the VPC service.
 
 🔹 Make sure you are in the eu-west-2 region, as shown in the lab diagram.
 
-10. Go to the Virtual Private Cloud ( VPC ) then scroll down in the left side panel to click  --> Site-to-Site VPN connections under the Virual Private Network (VPN) header.
-11. To Create the first Site-to-Site VPN connections complete the following steps:
+12. Go to the Virtual Private Cloud ( VPC ) then scroll down in the left side panel to click  --> Site-to-Site VPN connections under the Virual Private Network (VPN) header.
+13. To Create the first Site-to-Site VPN connections complete the following steps:
 - Click **Create VPN Connection**
 ![Jun-24-2025_at_11.09.24-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/887cac81f291c1b356a2ed488118be2d/assets/Jun-24-2025_at_11.09.24-image.png)
 - **Name tag - optional** - enter the name for your VPN connection
@@ -427,7 +427,7 @@ InfobloxDNSLab2025.
 - **Startup Action** -  **Start**
 - Click **Create VPN connection**
 ![Jun-24-2025_at_11.26.07-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/5f84fcebd0715247a709046e527a514e/assets/Jun-24-2025_at_11.26.07-image.png)
-12. Creating Second Site-to-Site VPN connections
+14. Creating Second Site-to-Site VPN connections
 - Click **Create VPN Connection**
 ![Jun-24-2025_at_11.09.24-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/887cac81f291c1b356a2ed488118be2d/assets/Jun-24-2025_at_11.09.24-image.png)
 - **Name tag - optional** - enter the name for your VPN connection
@@ -472,17 +472,17 @@ InfobloxDNSLab2025.
 ![Jun-24-2025_at_11.26.07-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/5f84fcebd0715247a709046e527a514e/assets/Jun-24-2025_at_11.26.07-image.png)
 
 
-13. Enable the Route Propogation on your VPC
-14. Go to VPC
-15. Select the section **Route Tables**
+15. Enable the Route Propogation on your VPC
+16. Go to VPC
+17. Select the section **Route Tables**
 
 ![Screenshot 2025-07-01 at 09.21.35.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/15c8a261a0fe9f3066f46ddf9d156ef5/assets/Screenshot%202025-07-01%20at%2009.21.35.png)
 
-16. Go to **Route Propagation** tab
+18. Go to **Route Propagation** tab
 ![Jun-24-2025_at_11.55.27-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/ccc94a5ade7ceace6a2a67c48cbaee92/assets/Jun-24-2025_at_11.55.27-image.png)
-17. Click **Edit Route Propagation**
+19. Click **Edit Route Propagation**
 ![Jun-24-2025_at_11.57.03-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/3ddbbb4a393067f373d1ae9baf77e6a2/assets/Jun-24-2025_at_11.57.03-image.png)
-18. Check **Enable** and hit **Save**
+20. Check **Enable** and hit **Save**
 ![Jun-24-2025_at_11.57.48-image.png](https://play.instruqt.com/assets/tracks/atmmwsclkofd/ae65906796d6f59133ef5e56e9ab6324/assets/Jun-24-2025_at_11.57.48-image.png)
 
 
