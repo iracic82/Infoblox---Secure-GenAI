@@ -1,5 +1,6 @@
 ---
 slug: genai-dns-final
+id: w9dqs67ekxcm
 type: quiz
 title: Untitled ChallengeFinal Challenge — GenAI DNS Threats in the Real World
 teaser: Let’s wrap it up! In this final challenge, you’ll test your understanding
@@ -15,6 +16,8 @@ solution:
 - 0
 difficulty: basic
 timelimit: 0
+lab_config:
+  default_layout_sidebar_size: 0
 enhanced_loading: false
 ---
 # Does Infoblox DNS Threat Defense rely on manually created Custom Lists to detect AI-generated or exfiltration-style domains in production?

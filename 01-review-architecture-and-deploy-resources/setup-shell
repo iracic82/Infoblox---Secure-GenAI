@@ -9,5 +9,7 @@
 echo "This is the setup script"
 
 set-workdir /root/infoblox-lab
+sleep 60
+sleep 60
 
 exit 0
